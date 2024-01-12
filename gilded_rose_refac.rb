@@ -11,6 +11,7 @@ class GildedRose
         caducado(item)
         aged_bonus(item)
         quality_down(item)
+        conjured_items(item)
       end
     end
   end
@@ -38,6 +39,12 @@ class GildedRose
   def quality_down(item)
     if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
       item.quality -=1
+    end
+  end
+
+  def conjured_items(item)
+    if item.name == "Conjured Mana Cake"
+      item.quality -= 1
     end
   end
   
