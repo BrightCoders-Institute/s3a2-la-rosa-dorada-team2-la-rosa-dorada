@@ -1,0 +1,27 @@
+Todos los artículos tienen un valor SellIn que denota el número de días que tenemos para 
+vender el artículo.
+- Todos los artículos tienen un valor de Quality que indica cuán valioso es el artículo.
+- Al final de cada día, nuestro sistema reduce ambos valores para cada artículo.
+
+Bastante simple, ¿verdad? Bueno, aquí es donde se pone interesante:
+
+*- Una vez que la fecha de vencimiento ha pasado, la Quality se degrada el doble de rápido.
+*- La Quality de un artículo nunca es negativa.
+*- El "Aged Brie" en realidad aumenta su Quality a medida que envejece.
+**- La Quality de un artículo nunca es superior a 50.
+*- "Sulfuras", al ser un artículo legendario, nunca necesita ser vendido ni disminuye en Quality.
+*- "Backstage passes", al igual que el "Aged Brie", aumenta su Quality a medida que su valor 
+de SellIn se acerca;
+*- La Quality aumenta en 2 cuando quedan 10 días o menos y en 3 cuando quedan 5 días o menos, pero
+*- Luego de la fecha de venta la La Quality cae a 0.
+
+Los artículos "Conjured" se degradan en Quality el doble de rápido que los artículos normales.
+
+Siéntete libre de realizar cambios en el método UpdateQuality y agregar nuevo código siempre y 
+cuando todo siga funcionando correctamente. Sin embargo, no modifiques la clase Item ni la propiedad 
+Items, ya que pertenecen al duende en la esquina que se enojará instantáneamente y te eliminará de un golpe, 
+ya que no cree en la propiedad compartida del código (puedes hacer que el método UpdateQuality y la propiedad 
+Items sean estáticos si lo deseas, nosotros nos haremos cargo).
+
+Solo para aclarar, un artículo nunca puede tener una Quality mayor a 50, sin embargo, "Sulfuras" es un artículo
+ legendario y, como tal, su Quality es 80 y nunca cambia.
